@@ -1,3 +1,21 @@
+## 0.2.0 (2024-08-12)
+
+### Feat
+
+- added pandas as dependency
+- added mesop as dependency
+- added initial ui with mesop
+
+### Fix
+
+- added -r to uv pip install command
+- removed from __future__ import annotations due to issues with mesop
+- updated uv dependency install
+
+### Refactor
+
+- removed from __future__ import annotations since it broke mesop
+
 ## 0.1.3 (2024-08-12)
 
 ### Fix
