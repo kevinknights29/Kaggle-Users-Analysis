@@ -32,4 +32,4 @@ RUN pip install uv
 COPY requirements.txt .
 
 # Install dependencies from the requirements file
-RUN uv pip install --system ./requirements.txt
+RUN uv pip install --system -r ./requirements.txt
