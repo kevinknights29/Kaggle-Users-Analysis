@@ -25,6 +25,7 @@ jobs:
           python -m pip install uv --quiet
           uv venv
           source .venv/bin/activate
+          echo PATH=$PATH >> $GITHUB_ENV
           uv pip install -r ${{ matrix.requirements }} --quiet
       - name: Run tests with pytest
         run: |
@@ -57,6 +58,7 @@ jobs:
           python -m pip install uv --quiet
           uv venv
           source .venv/bin/activate
+          echo PATH=$PATH >> $GITHUB_ENV
           uv pip install -r ${{ matrix.requirements }} --quiet
       - name: Ruff Check
         run: |
@@ -81,6 +83,7 @@ jobs:
           python -m pip install uv --quiet
           uv venv
           source .venv/bin/activate
+          echo PATH=$PATH >> $GITHUB_ENV
           uv pip install pre-commit
       - name: Pre-commit Update Hooks
         run: |
