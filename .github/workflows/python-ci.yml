@@ -63,7 +63,7 @@ jobs:
       - name: Ruff Check
         run: |
           uv pip install ruff
-          ruff check${{ matrix.dir }} --output-format=github .
+          ruff check ${{ matrix.dir }} --output-format=github .
       - name: Mypy Check
         run: |
           uv pip install mypy
