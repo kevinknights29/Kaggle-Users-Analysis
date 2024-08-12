@@ -1,3 +1,12 @@
+## 0.1.3 (2024-08-12)
+
+### Fix
+
+- added git pull to format job and merged commit and push steps
+- added continue on error to format job for pre-commit to apply changes
+- updated version job trigger
+- added commit changes to format job
+
 ## 0.1.2 (2024-08-12)
 
 ### Fix
