@@ -1,3 +1,10 @@
+## 0.1.1 (2024-08-12)
+
+### Fix
+
+- updated ruff job due typo
+- updated tests directories
+
 ## 0.1.0 (2024-08-12)
 
 ### Feat
