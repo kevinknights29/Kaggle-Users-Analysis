@@ -1,6 +1,6 @@
 [project]
 name = "Kaggle Users Analysis"
-version = "0.1.1"
+version = "0.1.2"
 authors = [
   {name = "Kevin Knights", email = "kevin.k.knights@gmail.com"},
 ]
