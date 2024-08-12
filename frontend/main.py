@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import mesop as me
 import pandas as pd
 
