@@ -67,7 +67,7 @@ jobs:
       - name: Mypy Check
         run: |
           uv pip install mypy
-          mypy check ${{ matrix.dir }} --disable-error-code=import-untyped
+          mypy ${{ matrix.dir }} --disable-error-code=import-untyped
 
   format:
     runs-on: ubuntu-latest
