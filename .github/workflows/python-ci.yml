@@ -90,7 +90,25 @@ jobs:
           pre-commit autoupdate
       - name: Pre-commit Format
         run: |
+          pre-commit install
           pre-commit run --show-diff-on-failure --color=always --all-files
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+      - name: Commit changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git commit -m "Apply automatic formatting changes"
+      - name: Push changes
+        if: steps.git-check.outputs.changes == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.head_ref }}
 
   version:
     runs-on: ubuntu-latest
