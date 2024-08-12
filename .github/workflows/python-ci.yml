@@ -1,6 +1,12 @@
 name: Python CI Pipeline
 
-on: [push]
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
@@ -111,6 +117,8 @@ jobs:
           branch: ${{ github.head_ref }}
 
   version:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [test, check, format]
     runs-on: ubuntu-latest
     name: "Bump version and create changelog with commitizen"
     steps:
