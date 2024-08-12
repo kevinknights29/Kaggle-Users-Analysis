@@ -1,3 +1,9 @@
+## 0.1.2 (2024-08-12)
+
+### Fix
+
+- removed check argument from mypy job
+
 ## 0.1.1 (2024-08-12)
 
 ### Fix
