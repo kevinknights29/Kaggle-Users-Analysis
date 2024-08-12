@@ -8,9 +8,9 @@ jobs:
       matrix:
         requirements: [backend/requirements.txt, frontend/requirements.txt]
         include:
-          - dir: backend/test/
+          - dir: backend/tests/
             requirements: backend/requirements.txt
-          - dir: frontend/test/
+          - dir: frontend/tests/
             requirements: frontend/requirements.txt
     runs-on: ubuntu-latest
     steps:
