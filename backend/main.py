@@ -4,7 +4,8 @@ from pathlib import Path
 from zipfile import ZipFile
 
 import pandas as pd
-from dotenv import find_dotenv, load_dotenv
+from dotenv import find_dotenv
+from dotenv import load_dotenv
 from fastapi import FastAPI
 
 # Load ENV Vars
